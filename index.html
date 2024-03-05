@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>AKG Sosnowiec</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <img src="./assets/img/favicon.ico" alt="logo" />
+          AKG
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#hero" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">O nas</a>
+            </li>
+            <li class="nav__item">
+              <a href="#featured" class="nav__link">Oferta</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Kontakt</a>
+            </li>
+            <li class="nav__item">
+              <a href="#address" class="nav__link">Adres</a>
+            </li>
+          </ul>
+
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line"></i>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="hero section" id="hero">
+        <div class="caption">
+          <h1>AKG</h1>
+          <h2>Sklep Motoryzacyjny</h2>
+        </div>
+        <video loop muted autoplay preload="auto">
+          <source src="./assets/img/akg_hero.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="about__container container grid">
+          <div class="about__group">
+            <img src="assets/img/about.png" alt="" class="about__img" />
+          </div>
+
+          <div class="about__data">
+            <h2 class="section__title about__title">Historia naszej firmy</h2>
+
+            <p class="about__description">
+              W 1991 roku otwarto nowy sklep specjalizujący się w sprzedaży
+              części samochodowych. Ten sklep szybko stał się miejscem docelowym
+              zarówno dla entuzjastów samochodów, jak i profesjonalistów. Dzięki
+              szerokiemu wyborowi wysokiej jakości części i akcesoriów klienci
+              mogli łatwo znaleźć to, czego potrzebowali do swoich pojazdów. Z
+              biegiem lat sklep stale poszerzał swoją ofertę i stał się zaufanym
+              źródłem dla wszystkich rodzajów potrzeb motoryzacyjnych. Dziś
+              pozostaje stałym elementem społeczności, służąc pokoleniom
+              klientów, którzy polegają na nim w zakresie części i akcesoriów
+              samochodowych.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured section" id="featured">
+        <h2 class="section__title">Nasza oferta</h2>
+        <div class="featured__description container">
+          <p>
+            Sklep oferuje różnorodną gamę produktów zarówno dla entuzjastów
+            samochodów, jak i profesjonalistów. Od części samochodowych po
+            kosmetyki, oleje i nie tylko, mają wszystko, czego potrzeba, aby
+            pojazdy działały płynnie i wyglądały jak najlepiej. Niezależnie od
+            tego, czy chodzi o części zamienne, niestandardowe ulepszenia, czy
+            specjalistyczne akcesoria, klienci mogą znaleźć wszystko pod jednym
+            dachem. Dzięki kompetentnemu personelowi i zaangażowaniu w
+            jakość,nasz sklep jest najlepszym miejscem dla entuzjastów
+            samochodów poszukujących produktów i usług na najwyższym poziomie.
+          </p>
+        </div>
+        <div class="featured__container container">
+          <div class="featured__content grid">
+            <article class="featured__card mix tesla">
+              <div class="shape shape__smaller"></div>
+              <h1 class="featured__title">Części</h1>
+              <h3 class="featured__subtitle">samochodowe</h3>
+              <img
+                src="assets/img/featured1.png"
+                alt=""
+                class="featured__img"
+              />
+            </article>
+
+            <article class="featured__card mix tesla">
+              <div class="shape shape__smaller"></div>
+              <h1 class="featured__title">Oleje</h1>
+              <h3 class="featured__subtitle">silnikowe</h3>
+              <img
+                src="assets/img/featured2.png"
+                alt=""
+                class="featured__img"
+              />
+            </article>
+
+            <article class="featured__card mix audi">
+              <div class="shape shape__smaller"></div>
+              <h1 class="featured__title">Żarówki</h1>
+              <h3 class="featured__subtitle">samochodowe</h3>
+              <img
+                src="assets/img/featured3.png"
+                alt=""
+                class="featured__img"
+              />
+            </article>
+
+            <article class="featured__card mix audi">
+              <div class="shape shape__smaller"></div>
+              <h1 class="featured__title">Płyny</h1>
+              <h3 class="featured__subtitle">do spryskiwaczy</h3>
+              <img
+                src="assets/img/featured4.png"
+                alt=""
+                class="featured__img"
+              />
+            </article>
+
+            <article class="featured__card mix porsche">
+              <div class="shape shape__smaller"></div>
+              <h1 class="featured__title">Kosmetyki</h1>
+              <h3 class="featured__subtitle">piekęgnacyjne</h3>
+              <img
+                src="assets/img/featured5.png"
+                alt=""
+                class="featured__img"
+              />
+            </article>
+
+            <article class="featured__card mix porsche">
+              <div class="shape shape__smaller"></div>
+              <h1 class="featured__title">Doradztwo</h1>
+              <h3 class="featured__subtitle">Pomoc w wyborze</h3>
+              <img
+                src="assets/img/featured6.png"
+                alt=""
+                class="featured__img"
+              />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="offer section" id="contact">
+        <div class="offer__container container grid">
+          <img src="assets/img/offer-bg.png" alt="" class="offer__bg" />
+
+          <div class="offer__data">
+            <h2 class="section__title offer__title">
+              Lorem Ipsum <br />
+              lorem ipsum?
+            </h2>
+
+            <p class="offer__description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi
+              eveniet sunt deleniti laboriosam iure autem nemo illum officia
+              voluptas excepturi.
+            </p>
+
+            <a href="#" class="button"> Subscribe Now </a>
+          </div>
+
+          <img src="assets/img/offer.png" alt="" class="offer__img" />
+        </div>
+      </section>
+
+      <section class="address section" id="address">
+        <h2 class="section__title">Nasz adres</h2>
+        <p class="section__subtitle">ul. Wspólna 11 41-200 Sosnowiec</p>
+        <div class="address__container container grid">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.0384267313116!2d19.125177215878743!3d50.27254110804894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716dabaa0627b79%3A0x3290f8b2e4911b5a!2sAKG.%20PHU.%20Cz%C4%99%C5%9Bci%20samochodowe.%20Sklep%20motoryzacyjny!5e0!3m2!1spl!2spl!4v1676721579755!5m2!1spl!2spl"
+            class="address__map"
+            width="100%"
+            height="600"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="logos section">
+        <div class="logos__container container grid">
+          <div class="logos__content">
+            <img src="assets/img/logo1.png" alt="" class="logos__img" />
+          </div>
+          <div class="logos__content">
+            <img src="assets/img/logo2.png" alt="" class="logos__img" />
+          </div>
+          <div class="logos__content">
+            <img src="assets/img/logo3.png" alt="" class="logos__img" />
+          </div>
+          <div class="logos__content">
+            <img src="assets/img/logo4.png" alt="" class="logos__img" />
+          </div>
+          <div class="logos__content">
+            <img src="assets/img/logo5.png" alt="" class="logos__img" />
+          </div>
+          <div class="logos__content">
+            <img src="assets/img/logo6.png" alt="" class="logos__img" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer section">
+      <div class="shape shape__big"></div>
+      <div class="shape shape__small"></div>
+
+      <div class="footer__container container grid">
+        <div class="footer__content">
+          <h1>AKG Sklep Moto</h1>
+          <img src="./assets/img/logo_tloki.png" alt="logo" />
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Kontakt</h3>
+
+          <ul class="footer__links">
+            <li>
+              <a href="tel:+48322669480">32 / 266 94 80</a>
+            </li>
+            <li>
+              <a href="mailto:akgsosnowiec@gmail.com">akgsosnowiec@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Adres</h3>
+
+          <ul class="footer__links">
+            <li>
+              <p>ul. Wspólna 11</p>
+            </li>
+            <li>
+              <p>41-200 Sosnowiec</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Follow us</h3>
+
+          <ul class="footer__social">
+            <a
+              href="https://www.facebook.com/akg.sosnowiec"
+              target="_blank"
+              class="footer__social-link"
+            >
+              <i class="ri-facebook-fill"></i>
+            </a>
+          </ul>
+        </div>
+      </div>
+
+      <span class="footer__copy">
+        &#169; Seahorse <span id="date_year"></span> All rigths reserved
+      </span>
+    </footer>
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+    </a>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

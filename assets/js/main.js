@@ -1,16 +1,19 @@
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
   navClose = document.getElementById("nav-close");
+const body = document.querySelector("body");
 
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
+    body.style.overflow = "hidden";
   });
 }
 
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
+    body.style.overflow = "auto";
   });
 }
 
@@ -119,8 +122,8 @@ sr.reveal(`.home__elec`, { delay: 600 });
 sr.reveal(`.home__img`, { delay: 800 });
 sr.reveal(`.home__car-data`, { delay: 900, interval: 100, origin: "bottom" });
 sr.reveal(`.home__button`, { delay: 1000, origin: "bottom" });
-sr.reveal(`.about__group, .offer__data`, { origin: "left" });
-sr.reveal(`.about__data, .offer__img`, { origin: "right" });
+sr.reveal(`.about__group, .contact__data`, { origin: "left" });
+sr.reveal(`.about__data, .contact__img`, { origin: "right" });
 sr.reveal(`.address__map`, { delay: 600, origin: "bottom" });
 sr.reveal(`.features__card`, { interval: 300 });
 sr.reveal(`.featured__card, .logos__content, .footer__content`, {

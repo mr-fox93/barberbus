@@ -1,10 +1,6 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap");
-/*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: red;
   --first-color-alt: rgb(245, 103, 103);
   --title-color: hsl(219, 8%, 95%);
@@ -13,7 +9,6 @@
   --white-color: #fff;
   --body-color: hsl(219, 4%, 4%);
   --container-color: hsl(219, 4%, 7%);
-  /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Exo", sans-serif;
   --h1-font-size: 1.5rem;
@@ -22,12 +17,10 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
-  /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
-  /*========== z index ==========*/
   --z-tooltip: 10;
-  --z-fixed: 100;
+  --z-fixed: 1000;
 }
 @media screen and (min-width: 968px) {
   :root {
@@ -134,6 +127,12 @@ a:hover {
   color: var(--first-color);
 }
 
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .header {
   width: 100%;
   background-color: transparent;
@@ -210,7 +209,6 @@ a:hover {
   cursor: pointer;
 }
 
-/* Show menu */
 .show-menu {
   right: 0;
 }
@@ -222,7 +220,6 @@ a:hover {
   box-shadow: 0 2px 4px hsl(0, 0%, 1%);
 }
 
-/* Active link */
 .active-link {
   color: var(--first-color);
 }
@@ -457,7 +454,6 @@ a:hover {
   font-size: 1.25rem;
 }
 
-/* Swiper class */
 .swiper-pagination-bullet {
   background: var(--text-color);
 }
@@ -570,13 +566,13 @@ a:hover {
   opacity: 1;
 }
 
-.offer {
+.contact {
   position: relative;
 }
-.offer__container {
+.contact__container {
   grid-template-rows: max-content 224px;
 }
-.offer__bg {
+.contact__bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -585,25 +581,47 @@ a:hover {
   object-fit: cover;
   object-position: center;
 }
-.offer__data {
+.contact__data {
+  max-width: 500px;
   text-align: center;
   position: relative;
 }
-.offer__title {
-  margin-bottom: 2rem;
+.contact__title {
+  text-align: center;
 }
-.offer__description {
+.contact__description {
   margin-bottom: 3rem;
 }
-.offer__img {
+.contact__img {
   position: absolute;
   max-width: initial;
   width: 400px;
   bottom: 2rem;
   right: -5.5rem;
 }
+.contact__form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  /*     & button {
+    align-self: center;
+  } */
+}
+.contact__form textarea,
+.contact__form input {
+  width: 100%;
+  background: inherit;
+  border: 1px solid var(--text-color-light);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  color: var(--text-color);
+}
+.contact__form textarea {
+  resize: none;
+  height: 150px;
+}
 
-/*=============== LOGOS ===============*/
 .logos__img {
   width: 40px;
   opacity: 0.4;
@@ -693,7 +711,6 @@ a:hover {
   width: 15rem;
 }
 
-/*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: 0.6rem;
   background-color: hsl(219, 4%, 16%);
@@ -707,7 +724,6 @@ a:hover {
   background-color: hsl(219, 4%, 32%);
 }
 
-/*=============== SCROLL UP ===============*/
 .scrollup {
   position: fixed;
   right: 1rem;
@@ -726,7 +742,6 @@ a:hover {
   transform: translateY(-0.25rem);
 }
 
-/* Show Scroll Up*/
 .show-scroll {
   bottom: 3rem;
 }
@@ -742,19 +757,23 @@ a:hover {
   .about__card {
     width: 150px;
   }
-  .offer__container {
+  .contact__container {
     grid-template-rows: max-content 180px;
   }
-  .offer__img {
+  .contact__img {
     width: 340px;
   }
   .logos__container {
     gap: 2.5rem;
   }
 }
+@media screen and (max-width: 575px) {
+  .about__group {
+    justify-self: center;
+  }
+}
 @media screen and (min-width: 576px) {
   .about__group {
-    width: 350px;
     justify-self: center;
   }
   .features__map {
@@ -764,17 +783,17 @@ a:hover {
   .featured__content {
     grid-template-columns: repeat(2, 228px);
   }
-  .offer__container {
+  .contact__container {
     grid-template-rows: initial;
     grid-template-columns: 0.5fr;
     justify-content: center;
   }
-  .offer__img {
+  .contact__img {
     position: relative;
     bottom: initial;
     right: initial;
   }
-  .offer__data {
+  .contact__data {
     margin-bottom: 4rem;
   }
 }
@@ -799,6 +818,9 @@ a:hover {
   }
   .about__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .about__group {
+    justify-self: center;
   }
   .logos__container {
     gap: 4rem 8rem;
@@ -903,22 +925,23 @@ a:hover {
     grid-template-columns: repeat(3, 248px);
     gap: 4rem;
   }
-  .offer__container {
+  .contact__container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 5rem;
     align-items: center;
     padding-bottom: 2rem;
   }
-  .offer__data, .offer__title {
+  .contact__data, .contact__title {
     text-align: initial;
   }
-  .offer__data {
+  .contact__data {
     margin-bottom: 0;
+    padding-left: 2rem;
   }
-  .offer__description {
+  .contact__description {
     padding-right: 6rem;
   }
-  .offer__img {
+  .contact__img {
     width: 450px;
   }
   .logos__container {

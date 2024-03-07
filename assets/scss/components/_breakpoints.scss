@@ -12,7 +12,7 @@
     width: 150px;
   }
 
-  .offer {
+  .contact {
     &__container {
       grid-template-rows: max-content 180px;
     }
@@ -26,9 +26,16 @@
   }
 }
 
+@media screen and (max-width: 575px) {
+  .about__group {
+    //width: 350px;
+    justify-self: center;
+  }
+}
+
 @media screen and (min-width: 576px) {
   .about__group {
-    width: 350px;
+    //width: 350px;
     justify-self: center;
   }
 
@@ -41,7 +48,7 @@
     grid-template-columns: repeat(2, 228px);
   }
 
-  .offer {
+  .contact {
     &__container {
       grid-template-rows: initial;
       grid-template-columns: 0.5fr;
@@ -83,6 +90,11 @@
 
   .about__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__group {
+    //width: 350px;
+    justify-self: center;
   }
 
   .logos__container {
@@ -213,7 +225,7 @@
     }
   }
 
-  .offer {
+  .contact {
     &__container {
       grid-template-columns: repeat(2, 1fr);
       column-gap: 5rem;
@@ -226,6 +238,7 @@
     }
     &__data {
       margin-bottom: 0;
+      padding-left: 2rem;
     }
     &__description {
       padding-right: 6rem;

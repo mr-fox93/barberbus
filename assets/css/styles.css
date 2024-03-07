@@ -571,6 +571,17 @@ button {
   overflow: hidden;
   position: relative;
 }
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  font-size: var(--h3-font-size);
+}
+.contact__links li a {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
 .contact__info {
   position: absolute;
   bottom: -40px;
@@ -691,6 +702,11 @@ button {
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
+}
+.footer__links li a {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
 }
 .footer__link, .footer__social-link {
   color: var(--text-color);

@@ -49,6 +49,12 @@
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
+
+    & li a {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 0.5rem;
+    }
   }
   &__link,
   &__social-link {

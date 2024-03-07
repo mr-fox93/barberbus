@@ -187,6 +187,7 @@
             </h2>
 
             <form
+              id="my-form"
               class="contact__form"
               action="https://formspree.io/f/myyajnka"
               method="POST"
@@ -196,17 +197,16 @@
                 type="email"
                 name="email"
                 placeholder="Twój adres e-mail"
-                required
               />
 
               <textarea
                 class="contact__textarea"
                 name="message"
                 placeholder="Twoja wiadomość"
-                required
               ></textarea>
 
               <button href="#" class="button">Wyślij</button>
+              <p class="contact__info" id="my-form-status"></p>
             </form>
           </div>
 

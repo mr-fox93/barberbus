@@ -130,3 +130,59 @@ sr.reveal(`.featured__card, .logos__content, .footer__content`, {
   interval: 100,
 });
 sr.reveal(`address__container`, { delay: 1000, origin: "left" });
+
+//formspree
+const form = document.getElementById("my-form");
+
+function hideStatus(message = "") {
+  const status = document.getElementById("my-form-status");
+  status.innerHTML = message;
+  setTimeout(() => {
+    status.innerHTML = "";
+  }, 3000);
+}
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  const status = document.getElementById("my-form-status");
+  const data = new FormData(event.target);
+
+  if (data.get("email") === "") {
+    hideStatus("Podaj email, aby wysłać wiadomość!");
+    return;
+  }
+  if (data.get("message") === "") {
+    hideStatus("Nie możesz wysłać pustej wiadomości!");
+    return;
+  }
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        hideStatus("Formularz wysłany!");
+        form.reset();
+      } else {
+        response.json().then((data) => {
+          if (Object.hasOwn(data, "errors")) {
+            hideStatus(
+              data["errors"].map((error) => error["message"]).join(", ")
+            );
+          } else {
+            hideStatus("Wystąpił problem z wysłaniem formularza.");
+          }
+        });
+      }
+    })
+    .catch((error) => {
+      hideStatus("Wystąpił problem z wysłaniem formularza.");
+    });
+}
+
+form.addEventListener("submit", handleSubmit);
+
+console.log("main.js loaded");

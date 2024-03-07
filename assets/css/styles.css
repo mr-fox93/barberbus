@@ -567,7 +567,13 @@ button {
 }
 
 .contact {
+  overflow: hidden;
   position: relative;
+}
+.contact__info {
+  position: absolute;
+  bottom: -40px;
+  color: var(--white-color);
 }
 .contact__container {
   grid-template-rows: max-content 224px;

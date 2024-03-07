@@ -1,5 +1,12 @@
 .contact {
+  overflow: hidden;
   position: relative;
+
+  &__info {
+    position: absolute;
+    bottom: -40px;
+    color: var(--white-color);
+  }
 
   &__container {
     grid-template-rows: max-content 224px;

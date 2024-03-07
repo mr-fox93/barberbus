@@ -42,7 +42,7 @@
   &__menu {
     @media screen and (max-width: 767px) {
       position: fixed;
-      background-color: hsla(0, 0%, 100%, 0.1);
+      background-color: hsla(0, 0%, 100%, 0.1) !important;
       top: 0;
       right: -100%;
       width: 100%;

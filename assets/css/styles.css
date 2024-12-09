@@ -138,6 +138,9 @@ button {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
+  border-radius: 0 0 1rem 1rem;
+  background-color: var(--body-color);
+  box-shadow: 0 2px 4px hsl(0, 0%, 1%);
 }
 
 .nav {
@@ -1072,9 +1075,17 @@ button {
   object-position: center;
 } */
 
-.button_reservation {
+.reservation {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 20px; /* Opcjonalnie dla lepszego wyglądu sekcji */
+}
+
+.button_reservation {
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* GIF-y po bokach, tekst na środku */
   align-items: center;
   text-align: center;
   font-size: larger;
@@ -1083,24 +1094,36 @@ button {
   background-color: white;
   color: black;
   border-radius: 5px;
-  font-size: larger;
   border: 4px solid black;
+  padding: 0 20px; /* Odstęp wewnętrzny */
+  gap: 10px; /* Odstępy między GIF-ami a tekstem */
+  overflow: hidden; /* Zapobiega wyciekom */
+  z-index: 1;
+  transition: transform 0.2s, box-shadow 0.2s; /* Animacje dla efektu kliknięcia */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Podstawowy cień */
+}
+
+.button_reservation:hover {
+  transform: translateY(2px); /* Symulacja lekkiego wciskania */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Zmniejszony cień */
+}
+
+.button_reservation:active {
+  transform: translateY(4px); /* Mocniejsze wciśnięcie przy kliknięciu */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Jeszcze mniejszy cień */
+  background-color: gray; /* Opcjonalna zmiana koloru dla aktywności */
+}
+
+.lollipop {
+  width: 50px; /* Rozmiar GIF-a */
+  height: auto;
 }
 
 @media screen and (max-width: 768px) {
   .button_reservation {
-    width: 80%;
+    width: 80%; /* Dostosowanie szerokości na mniejszych ekranach */
   }
-}
-
-.button_reservation:hover {
-  background-color: black;
-  color: white;
-}
-
-.reservation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* height: 100vh; */
+  .lollipop {
+    width: 30px; /* Zmniejszenie GIF-ów na urządzeniach mobilnych */
+  }
 }
